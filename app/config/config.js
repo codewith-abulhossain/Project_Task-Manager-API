@@ -2,7 +2,7 @@ export const PORT = 5000;
 export const DATABASE =
   "mongodb+srv://abul1:abul12345@cluster0.xjkec.mongodb.net/ProjectTaskManagerAPI";
 export const JWT_KEY = "ABC215421564456745";
-export const JWT_EXPIRE = 30 * 24 * 60 * 60;
+export const JWT_EXPIRE_TIME = 30 * 24 * 60 * 60;
 
 // export const EMAIL_HOST = "mail.teamrabbil.com";
 // export const EMAIL_PORT = 25;

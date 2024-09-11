@@ -1,12 +1,10 @@
-import mongoose from "mongoose";
-const UserSchema = new mongoose.Schema(
+import mongoose, { Mongoose } from "mongoose";
+const TaskSchema = new mongoose.Schema(
   {
-    email: { type: String, unique: true, require: true },
-    firstName: { type: String, require: true },
-    lastName: { type: String, require: true },
-    mobile: { type: String, require: true },
-    password: { type: String, unique: true, require: true },
-    otp: { type: String, default: 0 },
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    status: { type: String, require: true },
+    user_id: { type: Mongoose.Schema.Types.ObjectId, required: true },
   },
   {
     timestamps: true,
@@ -14,6 +12,6 @@ const UserSchema = new mongoose.Schema(
   }
 );
 
-const Users = mongoose.model("Users", UserSchema);
+const Task = mongoose.model("Task", TaskSchema);
 
-export default Users;
+export default Task;
